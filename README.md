@@ -4,6 +4,17 @@ This module will create Amazon CloudWatch controls for the CIS AWS Foundations B
 
 The controls are described in more detail in the [AWS Documentation](https://docs.aws.amazon.com/securityhub/latest/userguide/cloudwatch-controls.html)
 
+## Usage
+
+        module "cis_controls" {
+          source = "cweiblen/cis_cloudwatch_controls"
+
+          cloudwatch_log_group = "cloudtrail"
+          cis_benchmark_version = "1.4.0"
+        }
+
+To override the rules enabled, pass a list of rules IDs in the `enabled_rules` variable
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
