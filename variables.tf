@@ -28,7 +28,7 @@ variable "cis_benchmark_version" {
   type        = string
   default     = "1.4.0"
   validation {
-    condition     = contains(["1.2.0", "1.4.0", var.cis_benchmark_version])
+    condition     = contains(["1.2.0", "1.4.0"], var.cis_benchmark_version)
     error_message = "cis_benchmark_version must be one of either '1.2.0' or '1.4.0'"
   }
 }
